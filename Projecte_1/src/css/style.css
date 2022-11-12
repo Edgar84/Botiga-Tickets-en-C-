@@ -1,0 +1,82 @@
+﻿:root {
+    --black: #090909;
+    --red: #dc3545;
+    --orange: #d96e22;
+    --white: #fff;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header-logo .img-xs {
+    max-height: 50px;
+}
+.header-logo .img-md {
+    max-height: 40px;
+}
+.nav-pills .nav-item .nav-link {
+    border: 1px solid var(--white);
+}
+.nav-pills .nav-item .nav-link:hover {
+    border: 1px solid var(--red);
+    background-color: var(--white) !important;
+    color: var(--red);
+}
+.product-grid {
+    flex: 1;
+}
+.checkout-body .card {
+    min-width: 95%;
+}
+.card-body select {
+    display: block;
+    margin: auto;
+    max-width: 80px;
+}
+.card-body select:hover {
+    cursor: pointer;
+}
+.primary {
+    background-color: #000;
+}
+.btn-outline-primary {
+    color: var(--black);
+    border-color var(--black);
+}
+.btn-disabled {
+    pointer-events: none;
+}
+.card-body_img img {
+    max-width: 65px;
+    height: 100%;
+}
+.card-body .card-body_details {
+    justify-content: space-between;
+}
+.checkout-box > div {
+    padding: 25px;
+}
+
+@media (max-width: 425px) {
+    .card-body_img {
+        width: 100%;
+    }
+    .card-body_img img {
+        display: block;
+        margin: auto;
+    }
+    .card-body_navigation h5, .card-body_navigation h5 a {
+        width: 100%;
+        text-align: center;
+    }
+    .card-body_navigation h5 a#Checkout {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media (min-width: 321px) {
+    .checkout-body .card {
+        min-width: 320px;
+    }
+}
