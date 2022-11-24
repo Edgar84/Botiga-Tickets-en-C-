@@ -19,16 +19,9 @@
                 <img src="/src/img/logo5.png" class="d-block d-md-none img-xs" alt="Master Ticket">
                 <img src="/src/img/logo-lg.jpg" class="d-none d-md-block img-md" alt="Master Ticket">
               </asp:HyperLink>
-              <!--<a href="/" class="d-flex align-items-center mb-md-0 me-auto text-decoration-none header-logo">
-                <img src="/src/img/logo5.png" class="d-block d-md-none img-xs" alt="Master Ticket">
-                <img src="/src/img/logo-lg.jpg" class="d-none d-md-block img-md" alt="Master Ticket">
-              </a>-->
 
               <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <!--<a href="#" class="nav-link active bg-danger" aria-current="cart" OnClick="goToCart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>-->
                     <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link active bg-danger" OnClick="goToCart">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </asp:LinkButton>
@@ -36,40 +29,16 @@
               </ul>
             </header>
         </div>
-        <section class="product-grid">
-           <div class="container p-0 mt-5 mb-5">
+        <section class="container product-grid">
+           <div class="p-0 mt-5 mb-5">
                <div id="productContainer" runat="server" class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-                   
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41mQtYQUzmL.jpg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">HP Pavilion Gaming 10th Gen Intel Core i5 Processor</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h4 class="card-text text-danger">7 €</h4>
-                                <select id="Select1" class="form-select form-select-sm mb-3">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <button type="button" class="btn btn-outline-danger">Afegir al carret</button>
-                            </div>
-                        </div>
-                    </div>
-                   
-                 </div>
+                    
+               </div>
             </div>
+            <asp:Label ID="consolelog" runat="server" Text="" CssClass="alert alert-danger d-none"></asp:Label>
         </section>
-        <asp:Label ID="consolelog" runat="server" Text=""></asp:Label>
-
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="borrarCookies" CssClass="cookie" title="Borrar cookies"/>
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </form>
     <div class="container container-footer">
         <footer class="my-4">
@@ -77,86 +46,6 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="/src/js/functions.js"></script>
 </body>
 </html>
 
-<!--
-    
-    <div class="col">
-                        <div class="card">
-                            <i class="bi bi-heart-fill"></i>
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41mQtYQUzmL.jpg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">HP Pavilion Gaming 10th Gen Intel Core i5 Processor</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h4 class="card-text text-danger">7 €</h4>
-                                <select id="Select1" class="form-select form-select-sm mb-3">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <button type="button" class="btn btn-outline-danger">Afegir al carret</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <i class="bi bi-heart-fill"></i>
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41mQtYQUzmL.jpg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">HP Pavilion Gaming 10th Gen Intel Core i5 Processor</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h4 class="card-text text-danger">7 €</h4>
-                                <select id="Select1" class="form-select form-select-sm mb-3">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <button type="button" class="btn btn-outline-danger">Afegir al carret</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <i class="bi bi-heart-fill"></i>
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41mQtYQUzmL.jpg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">HP Pavilion Gaming 10th Gen Intel Core i5 Processor</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h4 class="card-text text-danger">7 €</h4>
-                                <select id="Select1" class="form-select form-select-sm mb-3">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <button type="button" class="btn btn-outline-danger">Afegir al carret</button>
-                            </div>
-                        </div>
-                    </div>
-    
-    -->

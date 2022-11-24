@@ -21,7 +21,9 @@
                 </asp:LinkButton>
 
               <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active bg-danger" aria-current="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link active bg-danger" OnClick="goToCart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </asp:LinkButton>
               </ul>
             </header>
         </div>
@@ -33,20 +35,19 @@
                 <h3 class="mb-4">Dades personals</h3>
                 <div class="mb-4">
                     <asp:Label ID="Name" runat="server" Text="NOM" CssClass="text-muted d-block text-center"></asp:Label>
-                    <input id="NameInput" type="text" class="form-control" />
+                    <input id="NameInput" runat="server"  type="text" class="form-control" required="required"/>
                 </div>
                 <div class="mb-4">
                     <asp:Label ID="DNI" runat="server" Text="DNI" CssClass="text-muted d-block text-center"></asp:Label>
-                    <input id="DNIInput" type="text" class="form-control" />
+                    <input id="DNIInput" runat="server" type="text" class="form-control" title="DNIInput" pattern="[0-9]{8}[A-Za-z]{1}" minlength="9" maxlength="9" required="required"/>
                 </div>
                 <div class="mb-4">
                     <asp:Label ID="Phone" runat="server" Text="TELÈFON" CssClass="text-muted d-block text-center"></asp:Label>
-                    <input id="PhoneInput" type="text" class="form-control"  />
+                    <input id="PhoneInput" runat="server" type="tel" class="form-control" title="PhoneInput" pattern="[0-9]{9}" minlength="9" maxlength="9" required="required"/>
                 </div>
-                <asp:Button ID="PlaceOrder" runat="server" Text="Realitzar comanda" CssClass="btn btn-danger" />
+                <asp:Button ID="PlaceOrder" runat="server" Text="Realitzar comanda" CssClass="btn btn-danger" OnClick="PlaceOrder_Click"/>
             </div>
         </div>
-
     </form>
     
     <div class="container container-footer">
@@ -55,6 +56,7 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/src/js/functions.js"></script>
 </body>
 </html>
 

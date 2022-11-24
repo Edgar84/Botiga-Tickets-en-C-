@@ -29,6 +29,22 @@ body {
 .checkout-body .card {
     min-width: 95%;
 }
+#productContainer .card {
+    height: 100%;
+}
+#productContainer .card-img-top {
+    max-height: 430px;
+}
+#productContainer p.card-text {
+    min-height: 100px;
+    text-align: justify;
+}
+.card-body_title + span {
+    font-weight: 600;
+}
+.card-body_title + span.euro::after {
+    content: '€/entrada';
+}
 .card-body select {
     display: block;
     margin: auto;
@@ -57,19 +73,92 @@ body {
 .checkout-box > div {
     padding: 25px;
 }
-
+.trash-delete.text-muted:hover {
+    color: #dc3545 !important;
+}
+.card-body_details > div {
+    height: 38px;
+}
+.card-body_details > div div input {
+    height: 50%;
+    line-height: 0;
+    background-color: #dbdada;
+}
+.card-body_details > div div input:hover {
+    background-color: #c9c9c9;
+}
+.card-body_details > div div input:first-child {
+    padding-bottom: 7px;
+    border-radius: 5px 5px 0 0;
+}
+.card-body_details > div div input:last-child {
+    padding-top: 2px;
+    border-radius: 0 0 5px 5px;
+}
+.euro::after {
+    content: '€';
+}
+#consolelog {
+    display: block;
+    text-align: center;
+}
+.cookie {
+    position: fixed;
+    top: 50%;
+    left: -5px;
+    background: url(/src/img/cookie.png) center center no-repeat;
+    border: 1px solid #934610;
+    background-color: #ffb56a;
+    padding: 15px 0px;
+    color: transparent;
+    background-size: 30px;
+    border-radius: 0 15px 15px 0;
+    opacity: 0.5;
+}
+@media (max-width: 767px) {
+    .card-body_img {
+        overflow: hidden;
+        height: 120px;
+    }
+    .card-body_img img {
+        min-width: 100% !important;
+        height: 290px !important;
+        display: block !important;
+    }
+    .card-body_title {
+        text-align: center;
+    }
+    .card-body_details {
+        flex-wrap: wrap;
+        justify-content: space-around !important;
+    }
+    .card-body_details a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 25px;
+    }
+    .card-body_title + span {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+} 
 @media (max-width: 425px) {
     .card-body_img {
         width: 100%;
     }
+
     .card-body_img img {
         display: block;
         margin: auto;
     }
+
     .card-body_navigation h5, .card-body_navigation h5 a {
         width: 100%;
         text-align: center;
     }
+
     .card-body_navigation h5 a#Checkout {
         padding-top: 10px;
         padding-bottom: 10px;
