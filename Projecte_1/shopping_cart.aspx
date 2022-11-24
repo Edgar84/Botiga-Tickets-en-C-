@@ -25,7 +25,7 @@
               </ul>
             </header>
         </div>
-
+        <h1 class="text-center">Carret</h1>
         <section class="h-100 h-custom">
           <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -34,172 +34,18 @@
                   <div class="card-body p-4">
                     <div class="row">
                       <div class="col-12">
-                        <!-- Card -->
-                        <div class="card mb-3"> 
-                          <div class="card-body">
-                            <div class="row justify-content-between">
-                              <div class="col-12 col-md-8 d-flex flex-row align-items-center mb-3 mb-md-0 flex-md-nowrap flex-wrap">
-                                <div class="card-body_img mb-3 mb-md-0">
-                                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                </div>
-                                <div class="ms-3">
-                                  <h5 class="card-body_title">Iphone 11 pro</h5>
-                                  <p class="small mb-0 card-body_decription">En un lugar de la mancha de cuyo nombre no quiero acordarme...</p>
-                                </div>
-                              </div>
-                              <div class="col-12 col-md-4 d-flex flex-row align-items-center card-body_details">
-                                <div>
-                                  <select class="form-select form-select-sm">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected="selected">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                </div>
-                                <div class="text-center">
-                                  <h5 class="mb-0">$900</h5>
-                                </div>
-                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Card -->
-                        <!-- Card -->
-                        <div class="card mb-3"> 
-                          <div class="card-body">
-                            <div class="row justify-content-between">
-                              <div class="col-12 col-md-8 d-flex flex-row align-items-center mb-3 mb-md-0 flex-md-nowrap flex-wrap">
-                                <div class="card-body_img mb-3 mb-md-0">
-                                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                </div>
-                                <div class="ms-3">
-                                  <h5 class="card-body_title">Iphone 11 pro</h5>
-                                  <p class="small mb-0 card-body_decription">En un lugar de la mancha de cuyo nombre no quiero acordarme...</p>
-                                </div>
-                              </div>
-                              <div class="col-12 col-md-4 d-flex flex-row align-items-center card-body_details">
-                                <div>
-                                  <select class="form-select form-select-sm">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected="selected">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                </div>
-                                <div class="text-center">
-                                  <h5 class="mb-0">$900</h5>
-                                </div>
-                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Card -->
-                          <!-- Card -->
-                        <div class="card mb-3"> 
-                          <div class="card-body">
-                            <div class="row justify-content-between">
-                              <div class="col-12 col-md-8 d-flex flex-row align-items-center mb-3 mb-md-0 flex-md-nowrap flex-wrap">
-                                <div class="card-body_img mb-3 mb-md-0">
-                                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                </div>
-                                <div class="ms-3">
-                                  <h5 class="card-body_title">Iphone 11 pro</h5>
-                                  <p class="small mb-0 card-body_decription">En un lugar de la mancha de cuyo nombre no quiero acordarme...</p>
-                                </div>
-                              </div>
-                              <div class="col-12 col-md-4 d-flex flex-row align-items-center card-body_details">
-                                <div>
-                                  <select class="form-select form-select-sm">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected="selected">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                </div>
-                                <div class="text-center">
-                                  <h5 class="mb-0">$900</h5>
-                                </div>
-                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Card -->
-                          <!-- Card -->
-                        <div class="card mb-3"> 
-                          <div class="card-body">
-                            <div class="row justify-content-between">
-                              <div class="col-12 col-md-8 d-flex flex-row align-items-center mb-3 mb-md-0 flex-md-nowrap flex-wrap">
-                                <div class="card-body_img mb-3 mb-md-0">
-                                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                </div>
-                                <div class="ms-3">
-                                  <h5 class="card-body_title">Iphone 11 pro</h5>
-                                  <p class="small mb-0 card-body_decription">En un lugar de la mancha de cuyo nombre no quiero acordarme...</p>
-                                </div>
-                              </div>
-                              <div class="col-12 col-md-4 d-flex flex-row align-items-center card-body_details">
-                                <div>
-                                  <select class="form-select form-select-sm">
-                                    <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected="selected">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                </div>
-                                <div class="text-center">
-                                  <h5 class="mb-0">$900</h5>
-                                </div>
-                                <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- End Card -->
-
+                        <div id="productCardContainer" runat="server">
+                            
+                         </div>
                         <!-- navigation -->
-
+                          <asp:Label ID="consoleLog" runat="server" Text=""></asp:Label>
                         <div class="d-flex justify-content-between align-items-center mb-4 mt-5 flex-wrap card-body_totals">
                           <div class="mb-4 mb-md-0">
-                            <p class="mb-0">You have 4 items in your cart</p>
+                              <asp:Label ID="totalItems" runat="server" Text="No tens cap producte al carret." CssClass="mb-0 d-block"></asp:Label>
                           </div>
                           <div>
                             <h5 class="mb-0"><span class="text-muted me-2">Total:</span> 
-                                <asp:Label ID="totalPrice" runat="server" Text="250€" CssClass="text-body"></asp:Label>
+                                <asp:Label ID="totalPrice" runat="server" Text="0" CssClass="text-body euro"></asp:Label>
                             </h5>
                           </div>
                         </div>
@@ -235,5 +81,6 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/src/js/functions.js"></script>
 </body>
 </html>

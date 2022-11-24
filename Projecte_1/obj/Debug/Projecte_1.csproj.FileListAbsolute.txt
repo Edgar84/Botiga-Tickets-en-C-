@@ -130,3 +130,17 @@ E:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint
 E:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.Taxonomy.dll
 E:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.UserProfiles.dll
 E:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.WorkflowServices.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.Office.Client.Policy.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.Office.Client.TranslationServices.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.Office.SharePoint.Tools.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.Online.SharePoint.Client.Tenant.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.ProjectServer.Client.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.DocumentManagement.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.Publishing.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.Runtime.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.Search.Applications.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.Search.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.Taxonomy.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.UserProfiles.dll
+G:\ZZZ-DAM2\M13\Projecte 1 - 2DAM\Projecte_1\Projecte_1\bin\Microsoft.SharePoint.Client.WorkflowServices.dll

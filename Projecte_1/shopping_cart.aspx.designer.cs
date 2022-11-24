@@ -33,6 +33,33 @@ namespace Projecte_1
         protected global::System.Web.UI.WebControls.LinkButton Home;
 
         /// <summary>
+        /// Control productCardContainer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productCardContainer;
+
+        /// <summary>
+        /// Control consoleLog.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label consoleLog;
+
+        /// <summary>
+        /// Control totalItems.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalItems;
+
+        /// <summary>
         /// Control totalPrice.
         /// </summary>
         /// <remarks>
