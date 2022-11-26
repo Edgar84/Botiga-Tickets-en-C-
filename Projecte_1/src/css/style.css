@@ -115,8 +115,16 @@ body {
     border-radius: 0 15px 15px 0;
     opacity: 0.5;
 }
+.container-thanks {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @media (max-width: 767px) {
     .card-body_img {
+        width: 100%;
         overflow: hidden;
         height: 120px;
     }
@@ -145,9 +153,6 @@ body {
     }
 } 
 @media (max-width: 425px) {
-    .card-body_img {
-        width: 100%;
-    }
 
     .card-body_img img {
         display: block;
@@ -162,6 +167,9 @@ body {
     .card-body_navigation h5 a#Checkout {
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .container-thanks {
+        min-height: 250px;
     }
 }
 @media (min-width: 321px) {

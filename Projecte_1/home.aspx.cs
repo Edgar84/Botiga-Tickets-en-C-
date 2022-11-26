@@ -104,7 +104,7 @@ namespace Projecte_1
                         button.Attributes["class"] = "btn btn-outline-danger";
                         button.ID = "btn-" + filmName.Replace(" ", "");
                         button.Attributes["runat"] = "server";
-                        button.Click += new EventHandler(((sender, e) => addToCart(sender, e, filmName, infoTiket[1], infoTiket[2], select, infoTxt)));
+                        button.Click += new EventHandler(((sender, e) => addToCart(sender, e, filmName, infoTiket[1], infoTiket[2], select)));
                         //button.Click += new EventHandler(((sender, e) => addToCart(infoTxt, select)));
                         button.Text = "Afegir al carret";
                         div_card_body.Controls.Add(button);
@@ -113,7 +113,7 @@ namespace Projecte_1
                 }
             }
         }
-        protected void addToCart(object sender, EventArgs e, String name, String price, String desc, DropDownList select, String infoTxt)
+        protected void addToCart(object sender, EventArgs e, String name, String price, String desc, DropDownList select)
         {
 
             // Guardar la cookie amb els productes
@@ -138,6 +138,7 @@ namespace Projecte_1
                             newProductCart = newProductCart.Replace(filmsInCart[i], productSumado);
                             // Afegir-la a la cookie
                             Response.Cookies["carret"].Value = newProductCart;
+                            select.SelectedValue = "";
                         }
                     }
                 }
@@ -146,58 +147,18 @@ namespace Projecte_1
                     // Si la pel·licula no está dins la cookie, la afegim
                     newProductCart += name + "," + price + "," + desc + "," + select.SelectedValue + "-";
                     Response.Cookies["carret"].Value = newProductCart;
+                    select.SelectedValue = "";
                 }
             }
             else
             {
-                // Si la cookie no existeix la creem i li doenm caducitat
+                // Si la cookie no existeix la creem i li donem caducitat
                 newProductCart = name + "," + price + "," + desc + "," + select.SelectedValue + "-";
                 Response.Cookies["carret"].Value = newProductCart;
                 Response.Cookies["carret"].Expires = DateTime.Now.AddDays(1);
+                select.SelectedValue = "";
             }
         }
-        /*protected void addToCart(object sender, EventArgs e, String name, String price, String desc, DropDownList select) {
-
-            // Guardar la cookie amb els productes
-            String newProductCart = "";
-            
-            if (Request.Cookies["carret"] != null)  
-            {
-                // Si la cookie existeix agafem el seu valor
-                newProductCart = Request.Cookies["carret"].Value;
-                String[] filmsInCart = newProductCart.Trim().Split('-');
-                // Comprovem si la pel·licula ja está dins la cookie
-                if (Array.Exists(filmsInCart, element => element.StartsWith(name)))
-                {
-                    for (int i = 0; i < filmsInCart.Length - 1; i++)
-                    {
-                        if (filmsInCart[i].Substring(0, filmsInCart[i].IndexOf(',')).Equals(name))
-                        {
-                            // Si la pel·licula es a dins li sumem només la quantitat a comprar
-                            int total = int.Parse(filmsInCart[i].Substring(filmsInCart[i].LastIndexOf(',') + 1)) + int.Parse(select.SelectedValue);
-                            String productSumado = filmsInCart[i].Replace(filmsInCart[i].Substring(filmsInCart[i].LastIndexOf(',') + 1), total.ToString());
-
-                            newProductCart = newProductCart.Replace(filmsInCart[i], productSumado);
-                            // Afegir-la a la cookie
-                            Response.Cookies["carret"].Value = newProductCart;
-                        }
-                    }
-                }
-                else
-                {
-                    // Si la pel·licula no está dins la cookie, la afegim
-                    newProductCart += name + "," + price + "," + desc + "," + select.SelectedValue + "-";
-                    Response.Cookies["carret"].Value = newProductCart;
-                }
-            }
-            else
-            {
-                // Si la cookie no existeix la creem i li doenm caducitat
-                newProductCart = name + "," + price + "," + desc + "," + select.SelectedValue + "-";
-                Response.Cookies["carret"].Value = newProductCart;
-                Response.Cookies["carret"].Expires = DateTime.Now.AddDays(1);
-            }
-        }*/
         protected void borrarCookies(object sender, EventArgs e) {
             if (Request.Cookies["carret"] != null)
             {

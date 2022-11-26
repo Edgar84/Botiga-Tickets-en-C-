@@ -115,6 +115,7 @@
     <Content Include="home.aspx" />
     <Content Include="shopping_cart.aspx" />
     <Content Include="checkout.aspx" />
+    <Content Include="thanks.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="checkout.aspx.designer.cs">
       <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thanks.aspx.cs">
+      <DependentUpon>thanks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thanks.aspx.designer.cs">
+      <DependentUpon>thanks.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

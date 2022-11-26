@@ -38,7 +38,6 @@
             <asp:Label ID="consolelog" runat="server" Text="" CssClass="alert alert-danger d-none"></asp:Label>
         </section>
         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="borrarCookies" CssClass="cookie" title="Borrar cookies"/>
-        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </form>
     <div class="container container-footer">
         <footer class="my-4">
@@ -46,6 +45,7 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/src/js/functions.js"></script>
 </body>
 </html>
 
