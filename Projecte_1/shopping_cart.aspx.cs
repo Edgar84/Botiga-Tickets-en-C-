@@ -20,7 +20,6 @@ namespace Projecte_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
- 
             String newProductCart = "";
 
             if (Request.Cookies["carret"] != null)
@@ -30,7 +29,6 @@ namespace Projecte_1
                 addProducts(newProductCart);
             }
             
-
         }
         protected void addProducts(String newProductCart) {
 
@@ -140,16 +138,12 @@ namespace Projecte_1
                     price.InnerText = total;
                     text_center.Controls.Add(price);
 
-                    /* Sumar/Restar/Borrar */
-
-
                     LinkButton delete = new LinkButton();
                     delete.ID = "dlt-" + nom.Replace(" ", "");
                     delete.Attributes["class"] = "trash-delete fas fa-trash-alt text-muted";
                     delete.Click += new EventHandler(((sender, e) => deleteToCart(card)));
                     delete.Attributes["Text"] = "";
                     col_2.Controls.Add(delete);
-
 
                     priceForProducts[count] = total;
                     count++;
@@ -165,83 +159,38 @@ namespace Projecte_1
             HttpCookie cookieCaret = Request.Cookies["carret"];
             String newProductCart = cookieCaret.Value;
             String[] filmsInCart = newProductCart.Split('-');
-            consoleLog.Text = "";
+            
             for (int i = 0; i < filmsInCart.Length - 1; i++) {
                 if (filmsInCart[i].Substring(0, filmsInCart[i].IndexOf(',')).Equals(card.ID.Replace("_", " ")))
                 {
-                    
                     String[] texts = filmsInCart[i].Split(',');
-                if (texts.Length == 4)
-                {
-                    int total = 0;
-                    switch (type)
+                    if (texts.Length == 4)
                     {
-                        case "plus":
-                            total = int.Parse(texts[3]) + 1;
-                            break;
-                        case "less":
-                            total = int.Parse(texts[3]) - 1;
-                            if (total == 0)
-                            {
-                                deleteToCart(card);
-                            }
-                            break;
+                        int total = 0;
+                        switch (type)
+                        {
+                            case "plus":
+                                total = int.Parse(texts[3]) + 1;
+                                break;
+                            case "less":
+                                total = int.Parse(texts[3]) - 1;
+                                if (total == 0)
+                                {
+                                    deleteToCart(card);
+                                }
+                                break;
+                        }
+                        String productSumado = nom + "," + base_price + "," + desc + "," + total.ToString();
+                        newProductCart = newProductCart.Replace(filmsInCart[i], productSumado);
+                        // Afegir-la a la cookie
+                        Response.Cookies["carret"].Value = newProductCart;
                     }
-                    //consoleLog.Text = texts[0] + "," + texts[1] + "," + texts[2] + "," + total.ToString() + "-";
-                    String productSumado = nom + "," + base_price + "," + desc + "," + total.ToString();
-                    newProductCart = newProductCart.Replace(filmsInCart[i], productSumado);
-                    // Afegir-la a la cookie
-                    Response.Cookies["carret"].Value = newProductCart;
-                }
-                else {
-                    consoleLog.Text = "Noo no nooo";
-                }
-                }
-
-            }
-            Response.Redirect(Request.RawUrl);
-            
-
-        }
-        /*
-        protected void edit(object sender, EventArgs e, HtmlGenericControl card, String type)
-        {
-            //Modifiquem la cookie amb el producte borrat
-            HttpCookie cookieCaret = Request.Cookies["carret"];
-            String newProductCart = cookieCaret.Value;
-            String[] filmsInCart = newProductCart.Split('-');
-
-            for (int i = 0; i < filmsInCart.Length - 1; i++)
-            {
-                if (filmsInCart[i].Substring(0, filmsInCart[i].IndexOf(',')).Equals(card.ID.Replace("_", " ")))
-                {
-                    
-                    // Si la pel·licula es a dins li sumem només la quantitat a comprar
-                    int total = 0;
-                    switch (type)
-                    {
-                        case "plus":
-                            total = int.Parse(filmsInCart[i].Substring(filmsInCart[i].LastIndexOf(',') + 1)) + 1;
-                            break;
-                        case "less":
-                            total = int.Parse(filmsInCart[i].Substring(filmsInCart[i].LastIndexOf(',') + 1)) - 1;
-                            if (total == 0) {
-                                deleteToCart(sender, e, card);
-                            }
-                            break;
-                    }
-                    //total = int.Parse(filmsInCart[i].Substring(filmsInCart[i].LastIndexOf(',') + 1)) + 1;
-                    String productSumado = filmsInCart[i].Replace(filmsInCart[i].Substring(filmsInCart[i].LastIndexOf(',') + 1), total.ToString());
-                    consoleLog.Text = productSumado;
-                    newProductCart = newProductCart.Replace(filmsInCart[i], productSumado);
-                    // Afegir-la a la cookie
-                    Response.Cookies["carret"].Value = newProductCart;
-                       
                 }
             }
+            // Recarregar pàgina per veure el canvis
             Response.Redirect(Request.RawUrl);
+
         }
-        */
         protected void deleteToCart(HtmlGenericControl card)
         {
             //Modifiquem la cookie amb el producte borrat
@@ -270,7 +219,7 @@ namespace Projecte_1
                 if (Int32.TryParse(product, out int price)){
                     total += price;
                     totalPrice.Text = total.ToString();
-                    totalItems.Text = "Tens " + count + " productes al carret.";
+                    totalItems.Text = count == 1 ? "Tens " + count + " producte al carret." : "Tens " + count + " productes al carret.";
                 }
                 
             }

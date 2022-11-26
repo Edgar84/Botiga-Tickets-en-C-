@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,7 +13,9 @@ namespace Projecte_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["carret"] == null || Request.Cookies["carret"].Value == "") {
+                PlaceOrder.CssClass += " disabled";
+            }
         }
         protected void PlaceOrder_Click(object sender, EventArgs e)
         {
@@ -62,7 +65,7 @@ namespace Projecte_1
                 writer.WriteLine("Pel·licula: " + texts[0]);
                 writer.WriteLine("Descripció: " + texts[2]);
                 writer.WriteLine("Preu: " + texts[1] + "€");
-                writer.WriteLine("Quantitat:" + texts[3] + " - (" + (int.Parse(texts[1]) * int.Parse(texts[3])).ToString() + ")");
+                writer.WriteLine("Quantitat:" + texts[3] + " - (" + (int.Parse(texts[1]) * int.Parse(texts[3])).ToString() + "€)");
                 writer.WriteLine("-----");
                 total += int.Parse(texts[1]) * int.Parse(texts[3]);
             }
@@ -72,6 +75,8 @@ namespace Projecte_1
             writer.WriteLine(total + "€");
 
             borrarCookies();
+            clearForm();
+            redirectToThanksPage();
         }
         protected void borrarCookies()
         {
@@ -83,6 +88,15 @@ namespace Projecte_1
                 currentUserCookie.Value = null;
                 HttpContext.Current.Response.SetCookie(currentUserCookie);
             }
+        }
+        protected void clearForm() {
+            NameInput.Value = "";
+            DNIInput.Value = "";
+            PhoneInput.Value = "";
+        }
+        protected void redirectToThanksPage() {
+            //Thread.Sleep(1500);
+            Response.Redirect("thanks.aspx");
         }
         protected void goToCart(object sender, EventArgs e)
         {

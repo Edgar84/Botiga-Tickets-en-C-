@@ -38,7 +38,6 @@
                             
                          </div>
                         <!-- navigation -->
-                          <asp:Label ID="consoleLog" runat="server" Text=""></asp:Label>
                         <div class="d-flex justify-content-between align-items-center mb-4 mt-5 flex-wrap card-body_totals">
                           <div class="mb-4 mb-md-0">
                               <asp:Label ID="totalItems" runat="server" Text="No tens cap producte al carret." CssClass="mb-0 d-block"></asp:Label>
@@ -61,8 +60,6 @@
                                 </asp:LinkButton>
                             </h5>
                         </div>
-                        
-                        
 
                       </div>
                      </div>
